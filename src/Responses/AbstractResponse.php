@@ -25,15 +25,17 @@ abstract class AbstractResponse extends Response
 
     protected $label = 'data';
 
-    protected $headers = [];
+    public $headers = [];
 
-    public function __construct($data = null, int $code = 200, string $message = "Action completed successfully", array $errors = [])
+    public function __construct($data = null, int $code = 200, string $message = "Action completed successfully",
+                                array $errors = [], array $headers = [])
     {
         parent::__construct($data, $code);
         $this->data = $data;
         $this->code = $code;
         $this->message = $message;
         $this->errors = $errors;
+        $this->headers = $headers;
     }
 
     public function send(): JsonResponse
@@ -45,7 +47,7 @@ abstract class AbstractResponse extends Response
                 "errors" => $this->errors
             ],
             $this->label => $this->data
-        ]);
+        ], $this->code, $this->headers, JSON_PRETTY_PRINT);
     }
 
     private function successful(): bool
@@ -56,6 +58,12 @@ abstract class AbstractResponse extends Response
     public function setLabel(string $label): self
     {
         $this->label = $label;
+        return $this;
+    }
+
+    public function setHeaders(array $headers): self
+    {
+        $this->headers = $headers;
         return $this;
     }
 

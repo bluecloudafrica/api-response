@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BlueCloudAfrica\ApiResponse\Responses;
+namespace BlueCloud\ApiResponse\Responses;
 
 
 class UnprocessableEntityResponse extends AbstractResponse

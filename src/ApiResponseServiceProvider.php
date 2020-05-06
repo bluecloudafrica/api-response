@@ -1,6 +1,6 @@
 <?php
 
-namespace BlueCloudAfrica\ApiResponse;
+namespace BlueCloud\ApiResponse;
 
 use Illuminate\Support\ServiceProvider;
 

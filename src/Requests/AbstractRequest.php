@@ -1,10 +1,10 @@
 <?php
 
 
-namespace BlueCloudAfrica\ApiResponse\Requests;
+namespace BlueCloud\ApiResponse\Requests;
 
 
-use BlueCloudAfrica\ApiResponse\Responses\UnprocessableEntityResponse;
+use BlueCloud\ApiResponse\Responses\UnprocessableEntityResponse;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;

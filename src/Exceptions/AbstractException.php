@@ -1,10 +1,10 @@
 <?php
 
 
-namespace BlueCloudAfrica\ApiResponse\Exceptions;
+namespace BlueCloud\ApiResponse\Exceptions;
 
 
-use BlueCloudAfrica\ApiResponse\Responses\GenericResponse;
+use BlueCloud\ApiResponse\Responses\GenericResponse;
 use Exception;
 
 abstract class AbstractException extends Exception

@@ -1,25 +1,25 @@
 {
-    "name": "bluecloudafrica/api-response",
+    "name": "bluecloud/api-response",
     "description": "Laravel API Responses",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Blue Cloud Africa",
-            "email": "info@bluecloud.africa"
+            "name": "Saul Chelewani",
+            "email": "saulchelewani@gmail.com"
         }
     ],
     "minimum-stability": "dev",
     "require": {},
     "autoload": {
         "psr-4": {
-            "BlueCloudAfrica\\ApiResponse\\": "src"
+            "BlueCloud\\ApiResponse\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "BlueCloudAfrica\\ApiResponse\\ApiResponseServiceProvider"
+                "BlueCloud\\ApiResponse\\ApiResponseServiceProvider"
             ]
         }
     }

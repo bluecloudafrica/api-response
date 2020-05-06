@@ -1,0 +1,14 @@
+{
+    "name": "bluecloudafrica/api-response",
+    "description": "Laravel API Responses",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Blue Cloud Africa",
+            "email": "info@bluecloud.africa"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

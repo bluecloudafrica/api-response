@@ -28,7 +28,7 @@ abstract class AbstractResponse extends Response
     public $headers = [];
 
     public function __construct($data = null, int $code = 200, string $message = "Action completed successfully",
-                                array $errors = [], array $headers = [])
+                                $errors = [], array $headers = [])
     {
         parent::__construct($data, $code);
         $this->data = $data;

@@ -44,6 +44,7 @@ abstract class AbstractResponse extends Response
             "status" => [
                 "code" => $this->code,
                 "success" => $this->successful(),
+                "message" => $this->message,
                 "errors" => $this->errors
             ],
             $this->label => $this->data

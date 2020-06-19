@@ -13,6 +13,10 @@ abstract class AbstractRequest extends FormRequest
 {
     protected function failedValidation(Validator $validator)
     {
-        throw new HttpResponseException((new UnprocessableEntityResponse($validator->errors()))->send());
+        $errors = collect($validator->errors())->map(function (array $error) {
+            return $error[0];
+        });
+
+        throw new HttpResponseException((new UnprocessableEntityResponse($errors->toArray()))->json());
     }
 }

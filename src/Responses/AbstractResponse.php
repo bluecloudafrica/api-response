@@ -50,6 +50,11 @@ abstract class AbstractResponse extends Response
         ], $this->code, $this->headers, JSON_PRETTY_PRINT);
     }
 
+    public function json(): JsonResponse
+    {
+        return $this->send();
+    }
+
     private function successful(): bool
     {
         return $this->code >= 200 && $this->code < 400;

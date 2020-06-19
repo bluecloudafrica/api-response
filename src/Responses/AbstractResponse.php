@@ -44,10 +44,16 @@ abstract class AbstractResponse extends Response
             "status" => [
                 "code" => $this->code,
                 "success" => $this->successful(),
+                "message" => $this->message,
                 "errors" => $this->errors
             ],
             $this->label => $this->data
         ], $this->code, $this->headers, JSON_PRETTY_PRINT);
+    }
+    
+    public function json(): JsonResponse
+    {
+        return $this->send();
     }
 
     public function json(): JsonResponse

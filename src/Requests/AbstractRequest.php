@@ -11,6 +11,11 @@ use Illuminate\Http\Exceptions\HttpResponseException;
 
 abstract class AbstractRequest extends FormRequest
 {
+    public function authorize()
+    {
+        return true;
+    }
+
     protected function failedValidation(Validator $validator)
     {
         $errors = collect($validator->errors())->map(function (array $error) {
